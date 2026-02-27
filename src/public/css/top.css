@@ -1,0 +1,194 @@
+/* ===================== ヘッダー ===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+/* 検索ボックス */
+.header__search-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.header__search {
+    max-width: 500px;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.header__search::placeholder {
+    color: #000;
+    opacity: 1;
+    /* ← Safari対策（薄くなるの防ぐ） */
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ログアウトボタン */
+.header__link-logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* マイページリンク */
+.header__link-mypage {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* 出品ボタン */
+.header__link-sell {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 24px;
+}
+/* =====================
+   メイン
+===================== */
+.main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* =====================
+   タブ
+===================== */
+.tab {
+    display: flex;
+    height: 47px;
+    gap: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 80px;
+}
+
+.tab__item {
+    color: #5F5F5F;
+    text-decoration: none;
+}
+
+.tab__item.active {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+/* =====================
+   仕切り線
+===================== */
+.divider {
+    margin: 15px 0 70px;
+    border: none;
+    border-top: 2px solid #5F5F5F;
+}
+
+/* =====================
+   商品一覧
+===================== */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+
+/* =====================
+   商品カード
+===================== */
+.product-card {
+    width: 290px;
+    height: 320px;
+    text-decoration: none;
+    /* aタグでも下線出さない */
+    color: inherit;
+    /* 文字色継承 */
+    display: block;
+    /* divとaの見た目を統一 */
+}
+
+/* クリック可能なときだけポインター */
+a.product-card {
+    cursor: pointer;
+}
+
+/* SOLD状態 */
+.product-card.sold {
+    cursor: default;
+}
+
+.product-card__image {
+    position: relative;
+    width: 290px;
+    height: 281px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: #D9D9D9;
+    /* 丸からはみ出た部分を切る */
+    overflow: hidden;
+}
+
+.product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 画像を中央でトリミング */
+    max-width: 100%;
+    display: block;
+}
+
+/* 売れたらグレー */
+.product-card.sold img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.product-card__name {
+    margin-top: 9px;
+    font-size: 25px;
+}
+
+.sold-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+}

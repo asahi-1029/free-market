@@ -1,0 +1,226 @@
+/* ===================== ヘッダー ===================== */
+.header {
+    background-color: #000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header__logo {
+    width: 370px;
+    height: auto;
+}
+
+/* 検索ボックス */
+.header__search-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.header__search {
+    max-width: 500px;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.header__search::placeholder {
+    color: #000;
+    opacity: 1;
+    /* ← Safari対策（薄くなるの防ぐ） */
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ログアウトボタン */
+.header__link-logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* マイページリンク */
+.header__link-mypage {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* 出品ボタン */
+.header__link-sell {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 24px;
+}
+/* =====================
+   メイン
+===================== */
+.purchase__container {
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    gap: 60px;
+}
+
+.purchase__left {
+    flex: 2;
+    /* 右より二倍の幅を取る */
+}
+
+.purchase__item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.item__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 177px;
+    height: 177px;
+    background-color: #D9D9D9;
+    /* 丸からはみ出た部分を切る */
+    overflow: hidden;
+}
+
+.item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 画像を中央でトリミング */
+}
+
+.item__name {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.item__price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+/* 区切り線 */
+.divider {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #000000;
+}
+
+.purchase__payment,.purchase__address {
+    padding: 0 20px;
+}
+
+.purchase__payment h3,.address__header h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.purchase__payment select {
+    display: inline-block;
+    margin-left: 60px;
+    max-width: 265px;
+    width: 100%;
+    height: 31px;
+    color: #5F5F5F;
+    border: 1px solid #5F5F5F;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.address__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address__header a {
+    display: inline-block;
+    font-size: 20px;
+    color: #0073CC;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.purchase__address p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 60px;
+}
+
+.purchase__right {
+    flex: 1;
+}
+
+.summary {
+    border: 1px solid #000;
+}
+
+.summary__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.summary__row+.summary__row {
+    border-top: 1px solid #000;
+    /* 1行目の次に来るrowにだけ */
+}
+
+/* 左側（商品代金・支払い方法） */
+.summary__row span:first-child {
+    font-size: 20px;
+}
+
+/* 右側（金額・支払い方法の値） */
+.summary__row span:last-child {
+    font-size: 24px;
+}
+
+/* ボタン */
+.form__button {
+    margin-top: 50px
+}
+
+.form__button-purchase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF5555;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    height: 60px;
+}
+
+.form__error {
+    height: 20px;
+    color: red;
+    font-size: 20px;
+}
