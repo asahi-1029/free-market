@@ -32,6 +32,7 @@
 - プロフィール画面_購入した商品一覧 : http://localhost/mypage?page=buy
 - プロフィール画面_出品した商品一覧 : http://localhost/mypage?page=sell
 - phpMyadmin : http://localhost:8080/
+- mailhog : http://localhost:8025/
 
 ## 使用技術（実行環境）
 - PHP 8.2.11
