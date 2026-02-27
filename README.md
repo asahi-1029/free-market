@@ -45,4 +45,5 @@
 - MailHog
 
 ## ER図
-![ER図](docs/er.png)
+<img width="1001" height="645" alt="スクリーンショット 2026-02-27 161647" src="https://github.com/user-attachments/assets/9cb0ca17-076b-4f6a-9748-b2300aa2a003" />
+
