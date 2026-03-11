@@ -134,7 +134,7 @@
     padding: 0 20px;
 }
 
-.purchase__payment h3,.address__header h3 {
+.purchase__payment h2,.address__header h2 {
     font-size: 20px;
     font-weight: bold;
 }

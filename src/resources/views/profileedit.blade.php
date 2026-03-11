@@ -28,7 +28,7 @@
     <main>
         <div class="edit">
             <div class="edit__heading">
-                <h2>プロフィール設定</h2>
+                <h1>プロフィール設定</h1>
             </div>
             <form class="form" action="/setup" method="post" enctype="multipart/form-data">
                 @csrf

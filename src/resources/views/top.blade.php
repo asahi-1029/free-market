@@ -28,8 +28,8 @@
     <main class="main">
         <!-- タブ -->
         <div class="tab">
-            <a href="/" class="tab__item {{ request('tab') !== 'mylist' ? 'active' : '' }}">おすすめ</a>
-            <a href="/?tab=mylist" class="tab__item {{ request('tab') === 'mylist' ? 'active' : '' }}">マイリスト</a>
+            <a href="/?keyword={{ request('keyword') }}" class="tab__item {{ request('tab') !== 'mylist' ? 'active' : '' }}">おすすめ</a>
+            <a href="/?tab=mylist&keyword={{ request('keyword') }}" class="tab__item {{ request('tab') === 'mylist' ? 'active' : '' }}">マイリスト</a>
         </div>
         <!-- 仕切り線 -->
         <hr class="divider">

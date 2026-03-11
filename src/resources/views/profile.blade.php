@@ -32,7 +32,7 @@
                 <img src="{{ $user->profile_image_url }}" alt="{{ $user->name }}">
                 @endif
             </div>
-            <p class="profile__name">{{ $user->name }}</p>
+            <h1 class="profile__name">{{ $user->name }}</h1>
             <div class="profile__edit">
                 <a href="/mypage/profile">プロフィールを編集</a>
             </div>
@@ -44,22 +44,12 @@
         <hr class="divider">
         <div class="product-list">
             @foreach($items as $item)
-                @if($item->purchase_exists)
-                <div class="product-card sold">
-                    <div class="product-card__image">
-                        <img src="{{ $item->image_url }}" alt="">
-                        <div class="sold-label">SOLD</div>
-                    </div>
-                    <p class="product-card__name">{{ $item->name }}</p>
-                </div>
-                @else
-                <a href="/item/{{ $item->id }}" class="product-card">
+                <div class="product-card">
                     <div class="product-card__image">
                         <img src="{{ $item->image_url }}" alt="{{ $item->name }}">
                     </div>
                     <p class="product-card__name">{{ $item->name }}</p>
-                </a>
-                @endif
+                </div>
             @endforeach
         </div>
     </main>

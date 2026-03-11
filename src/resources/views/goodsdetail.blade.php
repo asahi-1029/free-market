@@ -34,7 +34,7 @@
             </div>
             <div class="goods__right">
                 <div class="goods__main">
-                    <h2 class="goods__name">{{ $item->name }}</h2>
+                    <h1 class="goods__name">{{ $item->name }}</h1>
                     <p class="goods__brand">{{ $item->brand }}</p>
                     <p class="goods__price">{{ $item->formatted_price }}</p>
                     <div class="goods__review">
@@ -61,11 +61,11 @@
                     購入手続きへ
                 </a>
                 <section class="goods__description">
-                    <h3>商品説明</h3>
+                    <h2>商品説明</h2>
                     <p>{!! nl2br(e($item->description)) !!}</p>
                 </section>
                 <section class="goods__info">
-                    <h3>商品の情報</h3>
+                    <h2>商品の情報</h2>
                     <p>カテゴリー
                         @foreach($item->categories as $category)
                             <span class="tag">{{ $category->name }}</span>
@@ -74,7 +74,7 @@
                     <p>商品の状態 <span class="condition">{{ $item->condition_label }}</span></p>
                 </section>
                 <section class="goods__comments">
-                    <h3>コメント({{ $item->comments->count() }})</h3>
+                    <h2>コメント({{ $item->comments->count() }})</h2>
                     @forelse($item->comments as $comment)
                     <div class="comment">
                         <div class="comment__profile">

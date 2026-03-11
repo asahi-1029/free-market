@@ -172,11 +172,6 @@
     display: block;
 }
 
-.product-card.sold img {
-    filter: grayscale(100%);
-    opacity: 0.6;
-}
-
 .product-card__image {
     width: 290px;
     height: 281px;
@@ -203,18 +198,4 @@
 .product-card__name {
     margin-top: 9px;
     font-size: 25px;
-}
-
-.sold-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 6px;
-    letter-spacing: 2px;
 }

@@ -170,12 +170,12 @@
     margin: 0 auto;
 }
 
-.goods__description h3,.goods__info h3,.goods__comments h3 {
+.goods__description h2,.goods__info h2,.goods__comments h2 {
     font-size: 36px;
     margin: 0;
 }
 
-.goods__comments h3 {
+.goods__comments h2 {
     color: #5F5F5F;
 }
 

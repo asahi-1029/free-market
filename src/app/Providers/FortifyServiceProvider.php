@@ -53,7 +53,7 @@ class FortifyServiceProvider extends ServiceProvider
             public function toResponse($request)
             {
                 // 登録直後にプロフィール設定画面へ飛ばす
-                return redirect('/setup'); 
+                return redirect('/email/verify'); 
             }
         });
     }

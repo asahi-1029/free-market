@@ -16,7 +16,7 @@
     <main>
         <div class="login">
             <div class="login__heading">
-                <h2>ログイン</h2>
+                <h1>ログイン</h1>
             </div>
             <form class="form" action="/login" method="post">
                 @csrf

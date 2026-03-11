@@ -15,22 +15,24 @@ class ItemController extends Controller
     //商品一覧ページの表示と商品検索処理
     public function index(Request $request)
     {
+        $user = Auth::user();
+
         if ($request->tab === 'mylist') {
             if(!Auth::check())
             {
                 $items = collect();
                 return view('top',compact('items'));
             }
-            //まだ実行してない
-            $query = Auth::user()->favoriteItems()->withExists('purchase');
+            $items = Auth::user()->favoriteItems()->withExists('purchase')->keywordSearch($request->keyword)->get();
         } else {
-            //まだ実行してない
             $query = Item::withExists('purchase');
+            // 自分が出品した商品は除外
+            if ($user) {
+                $query->where('user_id', '!=', $user->id);
+            }
+            $query->keywordSearch($request->keyword);
+            $items = $query->get();
         }
-
-        $query->keywordSearch($request->keyword);
-
-        $items = $query->get();
         return view('top', compact('items'));
     }
 
@@ -46,7 +48,7 @@ class ItemController extends Controller
     {
         Comment::create([
             'content' => $request->content,
-            'user_id' => auth()->id(), // ログインユーザー
+            'user_id' => auth()->id(),
             'item_id' => $item_id,
         ]);
 

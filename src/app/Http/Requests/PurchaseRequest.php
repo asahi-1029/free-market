@@ -24,7 +24,7 @@ class PurchaseRequest extends FormRequest
     public function rules()
     {
         return [
-            'payment_method' => ['required','exists:payment_methods,id'],
+            'payment_method_id' => ['required','exists:payment_methods,id'],
             'address' => ['required'],
             'postal_code' => ['required'],
         ];
@@ -33,8 +33,8 @@ class PurchaseRequest extends FormRequest
     public function messages()
     {
         return [
-            'payment_method.required' => '支払い方法を選択してください',
-            'payment_method.exists' => '正しい支払い方法を選択してください',
+            'payment_method_id.required' => '支払い方法を選択してください',
+            'payment_method_id.exists' => '正しい支払い方法を選択してください',
             'address.required' => '配送先を登録してください',
             'postal_code.required' => '配送先を登録してください',
         ];

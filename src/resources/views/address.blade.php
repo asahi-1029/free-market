@@ -28,7 +28,7 @@
     <main>
         <div class="address">
             <div class="address__heading">
-                <h2>住所の変更</h2>
+                <h1>住所の変更</h1>
             </div>
             <form class="form" action="/purchase/address/{{ $item->id }}" method="post">
                 @csrf

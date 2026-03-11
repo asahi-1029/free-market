@@ -16,7 +16,7 @@
     <main>
         <div class="register">
             <div class="register__heading">
-                <h2>会員登録</h2>
+                <h1>会員登録</h1>
             </div>
             <form class="form" action="/register" method="post">
                 @csrf

@@ -44,17 +44,17 @@
                     <hr class="divider">
                     <!-- 支払い方法 -->
                     <section class="purchase__payment">
-                        <h3>支払い方法</h3>
-                        <select name="payment_method" id="payment-method">
+                        <h2>支払い方法</h2>
+                        <select name="payment_method_id" id="payment-method">
                             <option value="">選択してください</option>
                             @foreach($methods as $method)
-                                <option value="{{ $method->id }}"{{ old('payment_method') == $method->id ? 'selected' : ''}}>
+                                <option value="{{ $method->id }}"{{ old('payment_method_id') == $method->id ? 'selected' : ''}}>
                                     {{ $method->name }}
                                 </option>
                             @endforeach
                         </select>
                         <div class="form__error">
-                            @error('payment_method')
+                            @error('payment_method_id')
                             {{ $message }}
                             @enderror
                         </div>
@@ -63,13 +63,12 @@
                     <!-- 配送先 -->
                     <section class="purchase__address">
                         <div class="address__header">
-                            <h3>配送先</h3>
+                            <h2>配送先</h2>
                             <a href="/purchase/address/{{ $item->id }}">変更する</a>
                         </div>
                         @if($address)
-                            <p>〒 {{ $address->postal_code }}<br>
-                            {{ $address->address}}{{ $address->building}}
-                            </p>
+                            <p>〒 {{ $address->postal_code }}</p>
+                            <p>{{ $address->address }} {{ $address->building }}</p>
                         @endif
                         @if($address)
                             <input type="hidden" name="postal_code" value="{{ $address->postal_code }}" >
